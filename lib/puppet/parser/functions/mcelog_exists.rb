@@ -1,5 +1,5 @@
 
-require 'mcelog'
+require '/usr/sbin/mcelog'
 
 module Puppet::Parser::Functions
   newfunction(:mcelog_exists, :type => :rvalue) do |arg|
