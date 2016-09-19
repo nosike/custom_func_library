@@ -1,12 +1,12 @@
 
-#require 'mcelog'
+require 'mcelog'
 
 module Puppet::Parser::Functions
   newfunction(:mcelog_exists, :type => :rvalue) do |arg|
-    if File.exist?'/usr/sbin/mcelog'
-      0
+    if File.exist?(args[0])
+       return 1
      else
-      1
+       return 0
      end
    end
 end
